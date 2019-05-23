@@ -18,6 +18,12 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+  <link href="nicon.png" rel="icon">  
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
 
 <?php wp_head(); ?>
 </head>
