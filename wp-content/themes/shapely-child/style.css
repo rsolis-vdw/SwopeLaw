@@ -1,0 +1,192 @@
+/*
+Theme Name: Shapely Child
+Theme URL: http://swopelaw.com
+Description: Shapely Child Theme
+Author: SwopeLaw
+Author URL: http://swopelaw.com
+Template: shapely
+Version: 1.0.0
+Text Domain: shapely-child
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Defaults
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Sections
+	## Homepage - Community
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: Montserrat;
+	src:url('assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+	font-family: "Montserrat-black";
+	src:url('assets/fonts/Montserrat-Black.ttf');
+}
+
+body {
+	font-family: Georgia,serif;
+}
+
+nav#site-navigation {
+	background-color: #004677;
+}
+
+.main-navigation .menu li a, 
+.main-navigation .menu li > a, 
+.main-navigation .menu > li {
+	color: #fff;
+	font-weight: 600;
+}
+
+.main-navigation .menu li a:hover, 
+.main-navigation .menu li:hover > a, 
+.main-navigation .menu > li:hover:after {
+	color: #dcdcdc;
+	text-decoration: none;
+}
+
+section, footer {
+    padding: 36px 0;
+}
+
+.btn {
+	border-radius: unset;
+	font-family: Montserrat,sans-serif;
+	letter-spacing: 0.1px;
+    font-weight: 600;
+}
+
+.btn:hover {
+	color:#fff;
+}
+
+.sea-bg {
+	background-color: #004677;
+}
+
+.scarlet-bg {
+	background-color: #bf2c37;
+}
+
+.sea-bg .btn {
+	background-color: #bf2c37 !important;
+}
+
+.sea-bg .btn:hover {
+	background-color: #bf2c37 !important;
+}
+
+.sea-bg, .scarlet-bg {
+	color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+h1 {
+	font-size: 60px;
+	line-height: 64px;
+}
+
+h2 {
+	font-size: 45px;
+	line-height: 48px;
+}
+
+h3 {
+	font-size: 30px;
+	line-height: 33px;
+}
+
+h4 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+h5 {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+h6 {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+@media all and (max-width: 767px) {
+	h1 {
+		font-size: 32px;
+		line-height: 40px;
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	h5 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	h6 {
+		font-size: 12px;
+		line-height: 24px;
+	}
+}
+
+.section-header {
+	font-family: "Montserrat-black";
+	text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Homepage - Community
+--------------------------------------------------------------*/
+
+.community-section .section-header {
+	margin-bottom:20px;
+}
+
+.community-section .content {
+	font-size: 22px;
+}
