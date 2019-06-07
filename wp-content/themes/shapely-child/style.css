@@ -42,12 +42,20 @@ Text Domain: shapely-child
 	src:url('assets/fonts/Montserrat-Regular.ttf');
 }
 @font-face {
-	font-family: "Montserrat-black";
+	font-family: "montserrat-bold";
+	src:url('assets/fonts/Montserrat-Bold.ttf');
+}
+@font-face {
+	font-family: "montserrat-black";
 	src:url('assets/fonts/Montserrat-Black.ttf');
+}
+@font-face {
+	font-family: Unna;
+	src:url('assets/fonts/Unna-Regular.ttf');
 }
 
 body {
-	font-family: Georgia,serif;
+	font-family: Unna,Georgia,serif;
 }
 
 nav#site-navigation {
@@ -72,6 +80,10 @@ section, footer {
     padding: 36px 0;
 }
 
+.section-header, .section-subheader {
+	color: #004677;
+}
+
 .btn {
 	border-radius: unset;
 	font-family: Montserrat,sans-serif;
@@ -91,6 +103,10 @@ section, footer {
 	background-color: #bf2c37;
 }
 
+.scarlet-bg.hazy-bg {
+	background: linear-gradient(to right, #bf2c37, rgba(191, 44, 55, 0.84));
+}
+
 .sea-bg .btn {
 	background-color: #bf2c37 !important;
 }
@@ -99,7 +115,10 @@ section, footer {
 	background-color: #bf2c37 !important;
 }
 
-.sea-bg, .scarlet-bg {
+.sea-bg, 
+.scarlet-bg,
+.sea-bg .section-header, 
+.scarlet-bg .section-subheader{
 	color: #fff;
 }
 
@@ -169,88 +188,21 @@ h6 {
 		line-height: 24px;
 	}
 }
-/* vince*/
-
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
-}
-
-.card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-       width: 30%;
-    /*left: -80px;*/
-    /* height: 265px; */
-    margin-left: 20px;
-}
-
-.card-img {
-    /* width: 15%; */
-    height: 300px;
-    border-radius: calc(.25rem - 1px);
-}
-.row.content {
-    width: 90%;
-    /* text-align: center; */
-    margin: 0 auto;
-}
-
-.card-title {
-    /* margin-bottom: 32.75rem; */
-    float: left;
-    /* margin-bottom: 20px; */
-       margin-top: 21rem !important;
-}
-
-
-
-div#rowid {
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-top: 40px;
-    margin-bottom: 55px;
-}
-/*vince*/
 
 .section-header {
-	font-family: "Montserrat-black";
+	font-family: "montserrat-bold";
 	text-transform: uppercase;
 }
 
-/*
-.image-bg div[class*='col-'] {
-    position: fixed;
-    z-index: 3;
-        MARGIN-TOP: -180PX;
+.section-subheader {
+	margin: 0;
 }
-*/
-
-.align-transform {
-    position: relative;
-    transform: translate3d(0, -50%, 0);
-    -webkit-transform: translate3d(0, -50%, 0);
-    top: 50%;
-    z-index: 2;
-    left: 31%;
-    /* width: 100%; */
-}
-
 /*--------------------------------------------------------------
 # Defaults
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Homepage - Global
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -258,9 +210,200 @@ div#rowid {
 --------------------------------------------------------------*/
 
 .community-section .section-header {
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
-.community-section .content {
-	font-size: 22px;
+.community-section .sw-content {
+	font-size: 20px;
+}
+
+.community-cards {
+	padding-top: 100px;
+}
+
+.sw-card {
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 307px;
+	margin-bottom: 80px;
+	position: relative;
+	display: block;
+}
+
+.sw-card__content {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 10px;
+}
+
+.sw-card__title {
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+## Homepage - Upcoming Events
+--------------------------------------------------------------*/
+
+.upcoming-events-section .section-header {
+	margin-bottom: 0;
+}
+
+.upcoming-events-section .sw-content {
+	margin-top: 60px;
+}
+
+.event-screen {
+	width: 100%;
+	height: 400px;
+}
+
+.event-screen > [class^='event-screen__'] {
+	display: inline-block;
+	width: 49.8%;
+    vertical-align: top;
+    margin: 0;
+    position: relative;
+    height: inherit;
+}
+
+.event-screen__image {
+	overflow: hidden;
+    background-image: url(http://localhost/swopeLaw/wp-content/uploads/2019/06/Breakers_CIMG0089.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.event-screen__details {
+	padding: 40px 20px 20px;;
+	left: -2.55px;
+}
+
+.event-details__date,
+.event-details__title {
+    font-family: Montserrat,sans-serif;
+	font-weight: 600;
+}
+
+.event-details__date {
+	font-size: 12px;
+}
+
+.event-details__title {
+	
+}
+
+.event-details__desc {
+	font-size: 16px;
+}
+
+.event-details__action {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 20px;
+    width: 100%;
+}
+
+.events-slider {
+	margin: 90px 0 0;
+}
+
+.event-item {
+	display: inline-block;
+    width: 33%;
+    padding-right: 64px;
+    position: relative;
+	text-align: center;
+}
+
+.event-item:nth-child(3n+2) {
+	padding: 0 32px;
+}
+
+.event-item:nth-child(3n+3) {
+	padding-right: 0px;
+	padding-left: 64px;
+}
+
+li.event-item::after {
+    content: '';
+    border: 1px solid #004677;
+    position: absolute;
+    width: 10%;
+    /* left: 40%; */
+}
+
+.event-item__date {
+    background-color: #004677;
+    color: #fff;
+    font-family: Montserrat,sans-serif;
+    font-size: 12px;
+    padding: 4px;
+    font-weight: 600;
+}
+
+.event-item__title {
+    font-family: Montserrat,sans-serif;
+    font-size: 16px;
+	color: #545454;
+}
+
+.event-item.active .event-item__title {
+    color: #004677;
+}
+
+
+/*--------------------------------------------------------------
+## Homepage - Co-Counsel Section
+--------------------------------------------------------------*/
+
+
+.cocounsel-section .small-screen .top-parallax-section {
+    padding: 16px 0;
+} 
+
+.cocounsel-section .left-col,
+.cocounsel-section .right-col {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cocounsel-section .left-col {
+	width: 40%;
+}
+
+.cocounsel-section .right-col {
+	width: 59%
+}
+
+.cocounsel-section .right-col .sub-action {
+	display: inline-block;
+    width: 35%;
+}
+
+.cocounsel-section .right-col .sub-action:first-child {
+	margin-right: 10%;
+}
+
+.cocounsel-section .right-col .sub-action > a{
+	border: none;
+    white-space: normal;
+    padding: 14px 21px;
+    background-color: #004677;
+}
+
+/*--------------------------------------------------------------
+## Homepage - Meet Our Team Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Homepage - What We Do Section
+--------------------------------------------------------------*/
+
+.whatwedo-section .section-subheader {
+	letter-spacing: 0.03em;
+    margin: 19px 0 29px;
 }
